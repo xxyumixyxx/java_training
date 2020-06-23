@@ -47,7 +47,7 @@ public class Sample1 {
         //キーボードから2つの値を入力する
         //printlnではなくprintだけだと改行されない
         System.out.print("身長を入力してください = ");
-        //next'変数の型'()メソッドは、キーボード入力した値を変数に格納するためのメソッド
+        //next'変数の型'()メソッドは、キーボード入力した値を変数に格納するためのメソッド　ファイル入力もできる
         bodyHeight = scn.nextDouble();
         System.out.print("体重を入力してください = ");
         bodyWeight = scn.nextDouble();
@@ -56,9 +56,13 @@ public class Sample1 {
         //'bodyHeight = bodyHeight / 100'でbodyHeightを上書きした方が良い
         //上記のような、同じ変数に上書きする場合は、'bodyHeight /= 100'と省略して記述できる
         conversion = bodyHeight / 100;
+        // ※不必要な変数は作らない。再代入する方法で変数に値を格納する。
+
+        // bodyHeight = bodyHeight / 100;
+        // bmi = bodyWeight / bodyHeight / bodyHeight;
         bmi = bodyWeight / conversion / conversion;
 
         //演算結果をconsoleに表示
-        System.out.println("BMIは" + bmi);
+        System.out.println("BMIは" + bmi); // デバッグ済
     } 
 }
